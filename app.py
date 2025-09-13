@@ -4,7 +4,6 @@ from dashboard import dashboard
 from clientes import cliente
 from nf_e import nfe
 from receitas import receitas
-from despesas import despesas
 from home import home
 
 st.markdown(
@@ -33,7 +32,5 @@ elif selected == "NF-E":
     nfe()
 elif selected == "Receitas":
     receitas()
-elif selected == "Despesas":
-    despesas()
 elif selected == "Home":
     home()
