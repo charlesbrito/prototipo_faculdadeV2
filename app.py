@@ -5,6 +5,9 @@ from clientes import cliente
 from nf_e import nfe
 from receitas import receitas
 from home import home
+from impostos import impostos
+from despesas import despesas
+from fornecedores import fornecedores
 
 st.markdown(
     """
@@ -20,8 +23,8 @@ st.markdown(
 )
 
 with st.sidebar:
-    selected = option_menu("Menu", ["Home", "Configurações", "Dashboard", "Clientes", "Perfil", "NF-E", "Receitas", "Despesas"],
-                           icons=['house', 'gear', 'graph-up', 'people', 'person', 'file-earmark-text', 'currency-dollar', 'clipboard-data'], menu_icon='cast', default_index=1)
+    selected = option_menu("Menu", ["Home", "Dashboard", "Clientes", "NF-E", "Receitas", "Despesas", "Impostos", "Fornecedores"],
+                           icons=['house', 'graph-up', 'people', 'file-earmark-text', 'currency-dollar', 'clipboard-data', 'receipt', 'tag'], menu_icon='cast', default_index=1)
     selected
 
 if selected == "Dashboard":
@@ -34,3 +37,9 @@ elif selected == "Receitas":
     receitas()
 elif selected == "Home":
     home()
+elif selected == "Impostos":
+    impostos()
+elif selected == "Despesas":
+    despesas()
+elif selected == "Fornecedores":
+    fornecedores()

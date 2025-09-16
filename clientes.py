@@ -42,12 +42,6 @@ def cliente():
                 fit_columns_on_grid_load=True
             )
 
-            selected = grid_response['selected_rows']
-            if selected:
-                if st.button("Remover Cliente Selecionado"):
-                    idx = selected[0]["_selectedRowNodeInfo"]["nodeId"]
-                    st.session_state.clientes.pop(int(idx))
-                    st.experimental_rerun()  # recarrega a página
             
 
 
