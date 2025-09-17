@@ -8,6 +8,7 @@ from home import home
 from impostos import impostos
 from despesas import despesas
 from fornecedores import fornecedores
+from bate_papo import bate_papo
 
 st.markdown(
     """
@@ -23,8 +24,8 @@ st.markdown(
 )
 
 with st.sidebar:
-    selected = option_menu("Menu", ["Home", "Dashboard", "Clientes", "NF-E", "Receitas", "Despesas", "Impostos", "Fornecedores"],
-                           icons=['house', 'graph-up', 'people', 'file-earmark-text', 'currency-dollar', 'clipboard-data', 'receipt', 'tag'], menu_icon='cast', default_index=1)
+    selected = option_menu("Menu", ["Home", "Dashboard", "Clientes", "NF-E", "Receitas", "Despesas", "Impostos", "Fornecedores", "Bate-Papo"],
+                           icons=['house', 'graph-up', 'people', 'file-earmark-text', 'currency-dollar', 'clipboard-data', 'receipt', 'tag', 'bi-chat'], menu_icon='cast', default_index=1)
     selected
 
 if selected == "Dashboard":
@@ -43,3 +44,5 @@ elif selected == "Despesas":
     despesas()
 elif selected == "Fornecedores":
     fornecedores()
+elif selected == "Bate-Papo":
+    bate_papo()
