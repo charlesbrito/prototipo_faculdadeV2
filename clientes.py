@@ -11,6 +11,7 @@ def cliente():
         with co1:
             n_cliente = st.text_input("Nome do cliente")
             endereco = st.text_input("Endereço")
+            cnpj_cpf = st.text_input("CNPJ/CPF")
         with co2:
             telefone = st.text_input("Telefone")
             email = st.text_input("Email")
@@ -21,6 +22,7 @@ def cliente():
             st.session_state.clientes.append({
                 "Nome do cliente": n_cliente,
                 "Endereço": endereco,
+                "CNPJ/CPF": cnpj_cpf,
                 "Telefone": telefone,
                 "Email": email
             })

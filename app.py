@@ -28,16 +28,16 @@ with st.sidebar:
                            icons=['house', 'graph-up', 'people', 'file-earmark-text', 'currency-dollar', 'clipboard-data', 'receipt', 'tag', 'bi-chat'], menu_icon='cast', default_index=1)
     selected
 
-if selected == "Dashboard":
-    dashboard()
+if selected == "Home":
+    home()
 elif selected == "Clientes":
     cliente()
 elif selected == "NF-E":
     nfe()
 elif selected == "Receitas":
     receitas()
-elif selected == "Home":
-    home()
+elif selected == "Dashboard":
+    dashboard()
 elif selected == "Impostos":
     impostos()
 elif selected == "Despesas":

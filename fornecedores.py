@@ -10,6 +10,7 @@ def fornecedores():
         with co1:
             n_fornecedor = st.text_input("Nome do fornecedor")
             endereco = st.text_input("Endereço")
+            cnpj = st.text_input("CNPJ")
         with co2:
             telefone = st.text_input("Telefone")
             email = st.text_input("Email")
@@ -20,6 +21,7 @@ def fornecedores():
             st.session_state.fornecedores.append({
                 "Nome do cliente": n_fornecedor,
                 "Endereço": endereco,
+                "CNPJ": cnpj,
                 "Telefone": telefone,
                 "Email": email
             })
