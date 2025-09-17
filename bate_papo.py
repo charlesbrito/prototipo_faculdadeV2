@@ -10,11 +10,11 @@ def bate_papo():
             st.markdown(massage["content"])
     
     if prompt := st.chat_input("Em que posso te ajudar ?"):
-        st.session_state.assistente.append({"user": "role", "content": prompt})
+        st.session_state.assistente.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
         resposta = f"Sua mensagem: {prompt}"
-        st.session_state.assistente.append({'role':'assistant', 'content': resposta})
+        st.session_state.assistente.append({"role":"assistant", "content": resposta})
         with st.chat_message("assistant"):
             st.markdown(resposta)
 
